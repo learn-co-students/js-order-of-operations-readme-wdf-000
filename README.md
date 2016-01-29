@@ -27,3 +27,4 @@ or you can have them make a complete sentence - `i love javascripe`: `i` before 
 will need tests - if console.log can use spy to see order the console.log comes in
 
 ## Resources
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/js-order-of-operations-readme' title='Order Of Operations'>Order Of Operations</a> on Learn.co and start learning to code for free.</p>
