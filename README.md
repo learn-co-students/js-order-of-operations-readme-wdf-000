@@ -78,7 +78,7 @@ Let's write some code to test out what we learned. Once we finish, run the tests
 - Log the following to the console
   - `I` before `Love`
   - `Love` before `JavaScript`
--  Writting `JavaScript` to the console must be done in an Ajax callback.
+-  Writing `JavaScript` to the console must be done in an Ajax callback.
   -  Use https://api.github.com/repos/rails/rails/commits as your url 
 -  The Ajax request must be performed before we log `Love`
 
