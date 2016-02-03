@@ -49,7 +49,7 @@ What happend, why are things out of order now?! The answer is simple, `console.l
 
 ## When something goes wrong
 
-As we learned in previous lessions, not all Ajax requests complete successfully. Sometimes things go wrong and errors happen. When we add both success and error callbacks, order of operations is a little more confusing. In this next example, we run `console.log("Success")` only if the Ajax request completes successfully but if it fails, we only run `console.log("Fail")`.
+As we learned in previous lessons, not all Ajax requests complete successfully. Sometimes things go wrong and errors happen. When we add both success and error callbacks, order of operations is a little more confusing. In this next example, we run `console.log("Success")` only if the Ajax request completes successfully but if it fails, we only run `console.log("Fail")`.
 
 ```js
 console.log(1);
