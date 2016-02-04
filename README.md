@@ -39,15 +39,15 @@ The console output would change to this:
 2
 ```
 
-What happend, why are things out of order now?! The answer is simple, `console.log(2)` won't run until the `$.getJSON` completes. Our code executes in order except when we reach the Ajax request. The order now looks like this.
+What happened, why are things out of order now?! The answer is simple, `console.log(2)` won't run until the `$.getJSON` completes. Our code executes in order except when we reach the Ajax request. The order now looks like this:
 
 - `console.log(1)` executes.
 - We create an Ajax request with `$.getJSON`.
   - Our callback contains `console.log(2)` but `console.log(2)` isn't executed just yet.
 - `console.log(2)` executes.
-- Our ajax request completes and `console.log(2)` executes.
+- Our Ajax request completes and `console.log(2)` executes.
 
-## When something goes wrong
+## When Something Goes Wrong
 
 As we learned in previous lessons, not all Ajax requests complete successfully. Sometimes things go wrong and errors happen. When we add both success and error callbacks, order of operations is a little more confusing. In this next example, we run `console.log("Success")` only if the Ajax request completes successfully but if it fails, we only run `console.log("Fail")`.
 
@@ -63,7 +63,7 @@ to handle it
 });
 console.log(2);
 ```
-In our new code, both the success and error callbacks will only be executed after `console.log(1)` and `console.log(2)`. Nothing new there but which callback is executed is dependent on how the Ajax request completes. If the Ajax request fails, the callback provided for error is executed. If the Ajax request is successful, the callback provided for success will be executed. Let's take a look at how our new code runs.
+In our new code, both the success and error callbacks will only be executed after `console.log(1)` and `console.log(2)`. Nothing new there but which callback is executed is dependent on how the Ajax request completes. If the Ajax request fails, the callback provided for error is executed. If the Ajax request is successful, the callback provided for success will be executed. Let's take a look at how our new code runs:
 
 - The `console.log(1)` executes.
 - We make an Ajax request with `$.getJSON`.
