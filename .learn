@@ -1,6 +1,6 @@
 tags:
-  - a tag
+  - order-of-operations ajax
 languages:
-  - a language
-resources: 
-  - 0
+  - jquery
+resources:
+  - 2
