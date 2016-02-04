@@ -7,7 +7,7 @@
 ## Callback Order of Operations
 Knowing when a line of code will run is easy if those lines are written like this:
 
-```js
+```javascript
 console.log(1);
 console.log(2);
 console.log(3);
@@ -23,7 +23,7 @@ We start from line #1 and execute each statement in order. If we run this code w
 
 Nothing special right? Each console statement is executed one after another. When we introduce callbacks, the order of operation changes. If we were to take our previous example and place the `console.log(2)` inside of the callback of an Ajax request:
 
-```js
+```javascript
 console.log(1);
 $.getJSON("https://api.github.com/repos/rails/rails/commits", function(response){
   console.log(2);
