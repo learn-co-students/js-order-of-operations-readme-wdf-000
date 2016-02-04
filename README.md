@@ -54,16 +54,19 @@ As we learned in previous lessions, not all Ajax requests complete successfully.
 ```js
 console.log(1);
 $.getJSON("https://api.github.com/repos/rails/rails/commits", function(response){
+  // This is our success callback which is called automatically
   console.log("Success");
 }).fail(function(response){
+  // We have to explicitly configure the fail/error callback for getJSON
+to handle it
   console.log("Fail");
 });
 console.log(2);
 ```
-In our new code, both the success and error callbacks will only be executed after `console.log(1)` and `console.log(2)`. Nothing new there but which callback is executed is dependent on how the Ajax request completes. If the Ajax request fails, the callback provided for error is executed. If the Ajax request is successful, the callback provided for success will be executed. 
+In our new code, both the success and error callbacks will only be executed after `console.log(1)` and `console.log(2)`. Nothing new there but which callback is executed is dependent on how the Ajax request completes. If the Ajax request fails, the callback provided for error is executed. If the Ajax request is successful, the callback provided for success will be executed. Let's take a look at how our new code runs.
 
-- `console.log(1)` executes.
-- We create an Ajax request with `$.getJSON`.
+- The `console.log(1)` executes.
+- We make an Ajax request with `$.getJSON`.
   - Our success callback contains `console.log("Success")`.
   - Our error callback contains `console.log("Fail")`.
 - `console.log(2)` executes.
@@ -74,13 +77,18 @@ In our new code, both the success and error callbacks will only be executed afte
 ## Instructions
 Let's write some code to test out what we learned. Once we finish, run the tests to confirm your work is correct.
 
-- Create the function `showJsLove`
-- Log the following to the console
-  - `I` before `Love`
+- Create the function `showJsLove`. The function should use Ajax to make
+  an API call to https://api.github.com/repos/rails/rails/commits. Use your knowledge of order of operations to log the following to the console:
+
+- `I` before `Love`
+- `Love` before `JavaScript`
+
+Make sure the Ajax request is performed before you log `love`.
+
+The function should log the following to the console:
+
+- `I` before `Love`
   - `Love` before `JavaScript`
--  Writting `JavaScript` to the console must be done in an Ajax callback.
-  -  Use https://api.github.com/repos/rails/rails/commits as your url 
--  The Ajax request must be performed before we log `Love`
 
 ## Resources
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/js-order-of-operations-readme' title='Order Of Operations'>Order Of Operations</a> on Learn.co and start learning to code for free.</p>
