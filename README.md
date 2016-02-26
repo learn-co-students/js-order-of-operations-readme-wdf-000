@@ -44,7 +44,7 @@ What happened, why are things out of order now?! The answer is simple, `console.
 - `console.log(1)` executes.
 - We create an Ajax request with `$.getJSON`.
   - Our callback contains `console.log(2)` but `console.log(2)` isn't executed just yet.
-- `console.log(2)` executes.
+- `console.log(3)` executes.
 - Our Ajax request completes and `console.log(2)` executes.
 
 ## When Something Goes Wrong
@@ -92,3 +92,5 @@ The function should log the following to the console:
 
 ## Resources
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/js-order-of-operations-readme' title='Order Of Operations'>Order Of Operations</a> on Learn.co and start learning to code for free.</p>
+
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/js-order-of-operations-readme'>JS Order Of Operations </a> on Learn.co and start learning to code for free.</p>
