@@ -5,6 +5,7 @@ function showJsLove() {
     console.log("Javascript");
   });
   console.log("Love");
+  console.log("me");
 };
 
 $(document).ready(function (){
