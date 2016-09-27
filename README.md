@@ -43,7 +43,7 @@ What happened, why are things out of order now?! The answer is simple, `console.
 
 - `console.log(1)` executes.
 - We create an Ajax request with `$.getJSON`.
-  - Our callback contains `console.log(2)` but `console.log(2)` isn't executed just yet.
+  + Our callback contains `console.log(2)` but `console.log(2)` isn't executed just yet.
 - `console.log(3)` executes.
 - Our Ajax request completes and `console.log(2)` executes.
 
@@ -66,18 +66,17 @@ In our new code, both the success and error callbacks will only be executed afte
 
 - The `console.log(1)` executes.
 - We make an Ajax request with `$.getJSON`.
-  - Our success callback contains `console.log("Success")`.
-  - Our error callback contains `console.log("Fail")`.
+  + Our success callback contains `console.log("Success")`.
+  + Our error callback contains `console.log("Fail")`.
 - `console.log(2)` executes.
 - Our Ajax request finishes.
-  - If our request succeeded then `console.log("Success")` is executed.
-  - If our request failed then `console.log("Fail")` is executed.
+  + If our request succeeded then `console.log("Success")` is executed.
+  + If our request failed then `console.log("Fail")` is executed.
 
 ## Instructions
 Let's write some code to test out what we learned. Once we finish, run the tests to confirm your work is correct.
 
-- Create the function `showJsLove`. The function should use Ajax to make
-  an API call to https://api.github.com/repos/rails/rails/commits. Use your knowledge of order of operations to log the following to the console:
+- Create the function `showJsLove`. The function should use Ajax to make an API call to https://api.github.com/repos/rails/rails/commits. Use your knowledge of order of operations to log the following to the console:
 
 - `I` before `Love`
 - `Love` before `JavaScript`
@@ -87,9 +86,6 @@ Make sure the Ajax request is performed before you log `love`.
 The function should log the following to the console:
 
 - `I` before `Love`
-  - `Love` before `JavaScript`
+- `Love` before `JavaScript`
 
-## Resources
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/js-order-of-operations-readme' title='Order Of Operations'>Order Of Operations</a> on Learn.co and start learning to code for free.</p>
-
-<p data-visibility='hidden'>View <a href='https://learn.co/lessons/js-order-of-operations-readme'>JS Order Of Operations </a> on Learn.co and start learning to code for free.</p>
