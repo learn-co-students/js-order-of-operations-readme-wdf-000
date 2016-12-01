@@ -7,6 +7,8 @@ function showJsLove() {
     console.log("JavaScript");
   })
 
+  console.log("Love");
+
 };
 
 $(document).ready(function (){
